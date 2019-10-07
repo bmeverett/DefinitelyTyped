@@ -2,6 +2,7 @@
 // Project: https://github.com/reflux/refluxjs
 // Definitions by: Maurice de Beijer <https://github.com/mauricedb>
 //                 James Liang <https://github.com/LiangZugeng>
+//                 Brandon Everett <https://github.com/bmeverett>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
@@ -44,7 +45,7 @@ export class Store {
     listen(callback: Function, bindContext: any): Function;
     listenables: any;
     state: Readonly<any>;
-    setState(state: object): void;
+    setState(state: object, callback?: () => void): void;
 }
 
 export class Component<TOfStore extends typeof Store = typeof Store, P = any, S = any> extends React.Component<P, S> {
